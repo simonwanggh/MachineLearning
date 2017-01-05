@@ -1,4 +1,4 @@
 # Add your requirements here like:
-# numpy
+numpy==1.11.2
 # scipy>=0.9
 
