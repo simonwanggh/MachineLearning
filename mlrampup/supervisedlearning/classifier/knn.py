@@ -1,6 +1,8 @@
 from numpy import *
 import operator
+import logging
 
+logger = logging.getLogger('tofile')
 
 def classify0(inX, dataSet, labels, k):
     dataSetSize = dataSet.shape[0]
@@ -18,7 +20,7 @@ def classify0(inX, dataSet, labels, k):
     try:
         sortedClassCount = sorted(classCount.items(), key = operator.itemgetter(1),  reverse = True)
     except Exception as e:
-        error= str(e)
+        logger.error('Failed to sort', exc_info=True)
 
     return sortedClassCount[0][0]
 
