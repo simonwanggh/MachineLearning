@@ -1,6 +1,7 @@
 from mlrampup.supervisedlearning.classifier import knn
-import numpy as np
-from mlrampup.supervisedlearning.classifier import fileProcessor as fp
+from mlrampup.supervisedlearning.utils import fileProcessor as fp
+
+
 def main():
     ''' Simple test
     group = np.array([[1.0, 1.1], [1.0, 1.0], [0, 0], [0, 0.1]])

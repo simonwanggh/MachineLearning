@@ -9,9 +9,6 @@ try:
 except:
     __version__ = 'unknown'
 
-
-print()
-
 logger = logging.getLogger(__name__)
 log_file_path = path.join(path.dirname(path.abspath(__file__)), 'logging.conf')
 print(log_file_path)

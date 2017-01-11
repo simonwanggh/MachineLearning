@@ -21,7 +21,7 @@ def file2matrix(filename, delimiter, featureColumns,labelColIndice):
                 logger.warn('Dirty Data - line number : %d', index)
                 continue
             matReturn[index,:] = [listLine[i] for i in featureColumns]
-            classLabelVectorReturn.append(listLine[labelColIndice])
+            if labelColIndice is not None : classLabelVectorReturn.append(listLine[labelColIndice])
     except Exception as e:
         logging.error('Failed to transfer', exc_info=True)
 
