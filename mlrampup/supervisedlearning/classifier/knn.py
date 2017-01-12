@@ -20,8 +20,7 @@ def classify0(inX, dataSet, labels, k):
     try:
         sortedClassCount = sorted(classCount.items(), key = operator.itemgetter(1),  reverse = True)
     except Exception as e:
-        logger.error('Failed to sort', exc_info=True)
-
+        logger.error('Failed to sort',exc_info=True)
     return sortedClassCount[0][0]
 
 
