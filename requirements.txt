@@ -1,5 +1,5 @@
 # Add your requirements here like:
-numpy==1.11.2
-matplotlib==2.0.0rc2
+numpy==1.11.3
+matplotlib==1.4.3
 # scipy>=0.9
 
