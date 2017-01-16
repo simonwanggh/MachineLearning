@@ -8,7 +8,7 @@ def autoNorm(dataSet):
     normalDataSet = np.zeros(np.shape(dataSet))
     m = dataSet.shape[0]
     normalDataSet = dataSet - np.tile(minVals, (m,1))
-    normalDataSet = normalDataSet/np.tile(range, (m,1))
+    normalDataSet = normalDataSet/np.tile(ranges, (m,1))
     return normalDataSet, ranges, minVals
 
 
