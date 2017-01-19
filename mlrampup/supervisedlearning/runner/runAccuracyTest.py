@@ -20,10 +20,10 @@ def main():
     rightCountNormalized = 0;
     for i in range(testDataSize):
         #no normalized
-        label = knn.classify0(matTest[i,:],matReturn,classLabelVectorReturn, 3)
+        label = knn.classify0(matTest[i,:],matReturn,classLabelVectorReturn, 10)
         if label == classLabelVectorTest[i] : rightCountNoNormalized = rightCountNoNormalized + 1
         #normalized
-        labelNorm = knn.classify0(dp.normalizeSample(matTest[i,:],minVals,ranges), normalDataSet,classLabelVectorReturn, 3)
+        labelNorm = knn.classify0(dp.normalizeSample(matTest[i,:],minVals,ranges), normalDataSet,classLabelVectorReturn, 10)
         if labelNorm == classLabelVectorTest[i] : rightCountNormalized = rightCountNormalized + 1
     logging.info("No normalized , Accuracy : %f%%", float(rightCountNoNormalized)/float(testDataSize)*100)
     logging.info("Normalized , Accuracy : %f%%", float(rightCountNormalized) / float(testDataSize)*100)
