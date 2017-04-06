@@ -55,9 +55,9 @@ def calcShannonEntropy(dataSet,labelIndex = -1):
 
 def creatTree(dataSet, featIndexLabelDict,  labelIndex = -1):
     classList = [example[labelIndex] for example in dataSet]
-    if classList.count(classList[0]) == len(classList) #all are the same class
+    if classList.count(classList[0]) == len(classList) :#all are the same class
         return classList[0]
-    if len(dataSet[0]) == 1 # all features are travsed
+    if len(dataSet[0]) == 1 :# all features are travsed
         return dp.majorityCount(classList)
     bestFeat = chooseBestFeatureToSplit(dataSet,featIndexLabelDict.keys(),labelIndex)
     bestFeatLabel = featIndexLabelDict[bestFeat]
