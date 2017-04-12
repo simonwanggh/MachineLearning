@@ -1,5 +1,5 @@
 import numpy as np
-from mlrampup.supervisedlearning.classifier import decideTree as dt
+from mlrampup.supervisedlearning.classifier import decideTreeID3 as dt
 import logging
 
 logger = logging.getLogger('tofile')

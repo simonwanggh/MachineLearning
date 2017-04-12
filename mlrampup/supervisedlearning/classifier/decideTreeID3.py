@@ -70,3 +70,22 @@ def creatTree(dataSet, featIndexLabelDict,  labelIndex = -1):
          myTree[bestFeatLabel][value] = creatTree(dp.splitDataSet(dataSet,bestFeat,value),labels,labelIndex)
 
     return myTree
+
+
+def classify(item, labelDict, tree):
+    itemList = list(item)
+    for key in tree.keys():
+        branch = tree[key]
+        index = labelDict[key]
+        if type(branch).__name__ != 'dict':
+            return 'unknown'
+        for field in branch.keys():
+            fieldBranch = branch[field]
+            if field == item[index]:
+                if type(fieldBranch).__name__ == 'dict':
+                    return classify(item, labelDict, fieldBranch)
+                else:
+                    return fieldBranch
+
+    return 'unknown'
+
